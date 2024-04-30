@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor Website</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+
+        }
+
+        header {
+            background-color: rgb(196, 62, 62);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .donate {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            font-size: 2vw;
+
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-family: "Raleway", sans-serif;
+
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+            background-image: url('https://images.unsplash.com/photo-1615461065929-4f8ffed6ca40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ymxvb2QlMjBkb25hdGlvbnxlbnwwfHwwfHx8MA%3D%3D');
+            /* Corrected file path */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #E74C3C;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #fff;
+            color: #8C1C13;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about,
+        .donate,
+        .benefits,
+        .contact {
+            height: 100vh;
+        }
+
+
+
+        .about p {
+            font-size: 30px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about h2 {
+            font-size: 50px;
+        }
+        .donate {
+            background: #ccc;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .donate h2 {
+            font-size: 50px;
+        }
+        .donate strong {
+            color: orangered;
+        }
+        .donate p {
+            font-size: 20px;
+            color: rgb(25, 16, 16);
+        }
+
+        input[type="text"],
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #E74C3C;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #8C1C13;
+        }
+
+        footer {
+            background-color: #8C1C13;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .home-text {
+            top: 50%;
+            text-align: center;
+            align-items: center;
+            margin-top: 15rem;
+        }
+
+        .quick-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .about,
+        .donate,
+        .contact,
+        .find-blood {
+            text-align: center;
+        }
+        .contact {
+            position: relative;
+            text-align: center;
+            padding: 50px 0;
+            background-image: linear-gradient(45deg,
+            rgba(38, 38, 38, 0.75),
+            rgba(0, 0, 0, 0.75)),  url('https://images.pexels.com/photos/3786166/pexels-photo-3786166.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .new-contact {
+            border: 1px gray solid;
+            margin: 0 15vw;
+            padding: 6vw 0;
+            border-radius: 3px;
+        }
+
+        .contact h2{
+            color: rgb(255, 255, 255);
+            font-size: 7rem;
+        }
+        .contact p {
+            font-size: 3rem;
+            color: rgb(255, 255, 255);
+        }
+        .benefits h2{
+            font-size: 3rem;
+        }
+
+        .benefits p {
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .benefits strong {
+            font-size: 1.6rem;
+            color: #E74C3C;
+        }
+        .border-down-half {
+            margin-top: 2px;
+            width: auto;
+            border-bottom: 2px black solid;
+        }
+
+        .img-border {
+            border: 1px black solid;
+            border-radius: 2px;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            nav ul li {
+
+                margin: 10px 0;
+                font-size: 16px;
+            }
+            nav ul li a{
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        
+            .cta-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        
+            h2 {
+                font-size: 24px;
+            }
+        
+            .about h2 {
+                font-size: 36px;
+            }
+        
+            .donate h2 {
+                font-size: 36px;
+            }
+        
+            .donate p {
+                font-size: 16px;
+            }
+        
+            input[type="text"],
+            button {
+                padding: 8px;
+                font-size: 14px;
+            }
+        
+            .contact h2 {
+                font-size: 4rem;
+            }
+        
+            .contact p {
+                font-size: 2rem;
+            }
+        
+            .benefits h2 {
+                font-size: 2rem;
+            }
+        
+            .benefits p {
+                font-size: 1.2rem;
+            }
+        
+            .benefits strong {
+                font-size: 1.4rem;
+            }
+            img {
+                margin-left: 0px;
+                width:230px ;
+            }
+
+            .about-txt p {
+                margin-top: 0px;
+                font-size: 4vw;
+            }
+            
+        .about,
+        .donate,
+        .benefits,
+        .contact {
+            height: auto;
+        }
+        .new-contact {
+            margin: 0 3vw;
+            padding: 3vw 0;
+            border-radius: 3px;
+        }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-bar">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/get_involve">Donate Blood</a></li>
+                <li><a href="/donors_list">Find Blood</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="hero" style="height: 100vh;">
+        <h1 class="home-text">Save Lives by Donating Blood</h1>
+        <a href="/get_involve" class="cta-button">Donate Now</a>
+    </section>
+
+
+    <section class="about " id="about">
+        <div class="container">
+            <h2><span class="border-down-half">About Us</span> </h2>
+            <div class="row">
+                <div class="col">
+                    <img src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=600" width="350" class="img-border" alt="" srcset="">
+                </div>
+                <div class="col mt-5">
+                    <div class="about-txt">
+                        <p>Our mission is to save lives by connecting blood donors with those in need, ensuring a steady supply of
+                            blood for patients undergoing medical treatment and emergencies.</p>
+                        <p>Where no one suffers due to a lack of blood donations, where every patient has access to safe and timely
+                            blood transfusions to support their health and recovery.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <section class="donate ">
+        <div class="container">
+            <h2><span class="border-down-half">Donate Blood</span> </h2>
+            <p><strong>Age:</strong> Donors must be at least 18 years old and not more than 65 years old. Some blood
+                banks may accept donations from individuals aged 16 to 17 with parental consent.</p>
+            <p><strong>Weight:</strong> Donors must weigh at least 45 kilograms (approximately 99 pounds).</p>
+            <p><strong>Health:</strong> Donors should be in good health and free from acute illnesses or infections on
+                the day of donation. They should not have any chronic health conditions that could pose a risk to
+                themselves or the recipient of the donated blood.</p>
+            <p><strong>Hemoglobin Level:</strong> Female donors must have a minimum hemoglobin level of 12.5 grams per
+                deciliter (g/dL), while male donors must have a minimum hemoglobin level of 13.0 g/dL.</p>
+            <p><strong>Travel History:</strong> Donors who have traveled to areas with a high prevalence of malaria or
+                other infectious diseases may be deferred from donating blood for a certain period after their return,
+                depending on the specific guidelines of the blood bank.</p>
+            <p><strong>Medical History:</strong> Donors with a history of certain medical conditions or surgeries may be
+                deferred from donating blood, depending on the nature of the condition and its impact on blood safety.
+            </p>
+            <p><strong>Lifestyle Factors:</strong> Individuals who engage in high-risk behaviors such as intravenous
+                drug use, having multiple sexual partners, or engaging in unprotected sex may be deferred from donating
+                blood.</p>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+  <h2><span class="border-down-half">Benefits of Donating Blood</span> </h2>
+            <p><strong>Saving Lives:</strong> Blood donation is crucial for providing life-saving transfusions to
+                patients undergoing surgeries, trauma victims, individuals with medical conditions such as cancer or
+                anemia, and those who have experienced severe blood loss due to accidents or childbirth complications.
+            </p>
+            <p><strong>Supporting Medical Treatments:</strong> Blood donations are essential for various medical
+                procedures, including organ transplants, bone marrow transplants, and treatments for certain blood
+                disorders and diseases.</p>
+            <p><strong>Health Benefits for Donors:</strong> Donating blood can have positive health effects for donors,
+                including reducing the risk of certain health conditions such as heart disease, stroke, and cancer.
+                Regular blood donation helps maintain healthy iron levels in the body, which can reduce the risk of iron
+                overload.</p>
+            <p><strong>Screening for Health Conditions:</strong> Blood donation centers conduct screening tests on
+                donated blood to ensure its safety and quality. These tests may detect certain health conditions such as
+                infectious diseases (e.g., HIV, hepatitis) or abnormal blood cell counts, providing donors with valuable
+                health information.</p>
+            <p><strong>Stimulating Blood Cell Production:</strong> After donating blood, the body works to replenish the
+                lost blood volume, which stimulates the production of new blood cells. This process helps maintain the
+                overall health and functionality of the donor's circulatory system.</p>
+            <p><strong>Sense of Fulfillment:</strong> Many donors experience a sense of fulfillment and satisfaction
+                knowing that their donation has made a positive impact on someone else's life. The act of giving blood
+                can foster a sense of community and altruism.</p>
+            <p><strong>Social Benefits:</strong> Blood donation events often bring communities together and raise
+                awareness about the importance of donating blood. Participating in blood drives or donation events can
+                provide opportunities for social interaction and networking.</p>
+        </div>
+    </section>
+
+
+
+    <section class="contact about" id="contact">
+        <div class="container">
+            <div class="new-contact">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <p>Phone: 9562451236</p>
+                    <p>Email: ssp@gamil.com</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
